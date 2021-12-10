@@ -1,12 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My project</title>
 </head>
+
 <body>
-<h1>helo</h1>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post"
+    onsubmit="onSubmit(543)">
+    <div class="blok-input">
+      <fieldset>
+        <legend>Personal information</legend>
+        <div class="input-content">
+          <label class="input-label" for="Surname">
+            Surname:</label>
+          <input class="input" type="text" name="Surname" id="Surname" required>
+        </div>
+        <div class="input-content">
+          <label class="input-label" for="name">
+            Name:</label>
+          <input type="text" name="Name" id="name" required>
+        </div>
+        <div class="input-content">
+          <label class="input-label" for="age">
+            How old are You?</label>
+          <input type="number" name="how-old" min="0" max="130" id="age">
+        </div>
+        <div class="input-content">
+          <label class="input-label" for="date-of-birth">
+            Full date of birth:</label>
+          <input type="date" name="date-of-birth" id="date-of-birth">
+        </div>
+        <div class="input-content last-input">
+          <label class="input-label" for="accept">
+            I accept the term of the agreement:
+          </label>
+          <input type="checkbox" name="date-of-birth" id="accept">
+        </div>
+      </fieldset>
+    </div>
+    <div class="blok-input">
+      <fieldset>
+        <legend>Registration</legend>
+        <div class="input-content">
+          <label class="input-label" for="email">
+            E-mail: </label>
+          <input type="email" name="email" id="email" required placeholder="email@example.com">
+        </div>
+        <div class="input-content last-input">
+          <label class="input-label" for="password">
+            Password:</label>
+          <input type="password" name="Password" id="password" required minlength="6" maxlength="30">
+        </div>
+      </fieldset>
+    </div>
+    <div class="blok-input">
+      <fieldset>
+        <legend>
+          An interesting fact about you!
+        </legend>
+        <div class="input-content">
+          Do you love cats?
+          <input type="radio" name="cat" id="cat-yes">
+          <label for="cat-yes">Yes</label>
+          <input type="radio" name="cat" id="cat-No">
+          <label for="cat-No">No</label>
+        </div>
+        <div class="input-content">
+          <label class="input-label">
+            What time do you go to bed?
+            <input type="time" name="time">
+          </label>
+        </div>
+        <div class="input-content">
+          <label class="input-label">
+            What are your favorite of cars?
+            <select name="cars" multiple>
+              <option value="BWM">BWM</option>
+              <option value="Audi">Audi</option>
+              <option value="Lada">Lada</option>
+              <option value="nan" disabled selected></option>
+            </select>
+          </label>
+        </div>
+        <div class="input-content last-input">
+          <label class="input-label">
+            How do you rate our work?
+            <input type="range" name="range" min="0" max="10" value="0" step="1">
+          </label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="blok-input">
+      <fieldset>
+        <legend>Additional info: </legend>
+        <label class="input-label">
+          Comments:
+          <textarea name="feedback" id="" cols="" rows=""></textarea>
+          <div class="input-content">
+            <label class="input-label last-input">
+              <label for="recommend">Would you recommend us? </label>
+              <select name="recommend" id="recommend">
+                <option>yes</option>
+                <option>no</option>
+              </select>
+            </label>
+          </div>
+      </fieldset>
+    </div>
+    <button>Submit</button>
+  </form>
 </body>
+
 </html>
